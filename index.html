@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Home</title>
+<script src="scripts/modernizr-1.6.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/basic.css">
+</head>
+<body>
+<header>
+<img src="images/logo.gif">
+	<nav>
+		<ul>
+			<li><a href="index.html">home</a></li>
+			<li><a href="about.html">about</a></li>
+			<li><a href="photos.html">photos</a></li>
+			<li><a href="live.html">live</a></li>
+			<li><a href="contact.html">contact</a></li>
+		</ul>
+	</nav>
+</header>
+<article>
+<h1>Welcome</h1>
+<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxx</p>
+<div id="first"><img src="images/slideshow.gif"  id="img1"></div>
+</article>
+<script type="text/javascript">
+	function first(){
+		var firsts=document.getElementById("first");
+        var img1=document.getElementById("img1");
+         img1.style.position="absolute";
+         img1.style.left="0px";
+         img1.style.top="0px";
+        var xpos=parseInt(img1.style.left);
+        var ypos=parseInt(img1.style.top);
+        var abouts=document.getElementsByTagName("ul");
+        var as=abouts[0].getElementsByTagName("a");
+        function a1(){
+        as[1].onmouseover=function(){
+
+          if(xpos==-150&&ypos==0){
+          	return true;
+          }
+          if(xpos<-150){
+             xpos++;
+          }
+          if(xpos>-150){
+          	xpos--;
+          }
+          if(ypos<0){
+            ypos++;
+          }
+          if(ypos>0){
+          	ypos--;
+          }
+          img1.style.left=xpos+"px";
+          img1.style.top=ypos+"px";
+        }
+        }
+        setInterval("a1()",10);
+	}
+first();
+</script>
+</body>
+</html>

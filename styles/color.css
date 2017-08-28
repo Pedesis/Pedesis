@@ -1,0 +1,23 @@
+body{
+  color:#fb5;
+  background-color:#334;
+}
+header {
+  color:#ec8;
+  background-color: #334;
+  border-color:#667;
+}
+header nav{
+  color:#455;
+  background-color: #789;
+  border-color:#667;
+}
+header nav a:hover{
+color:#667;
+background-color: #fb5;
+}
+article{
+  color: #223;
+  background-color: #edc;
+  border-color:#667;
+}
